@@ -240,12 +240,12 @@ namespace GPUDrivenTerrainLearn
  
 
         private void ClearBufferCounter(){
-            _commandBuffer.SetBufferCounterValue(_maxLODNodeList,(uint)_maxLODNodeList.count);
-            _commandBuffer.SetBufferCounterValue(_nodeListA,0);
-            _commandBuffer.SetBufferCounterValue(_nodeListB,0);
-            _commandBuffer.SetBufferCounterValue(_finalNodeListBuffer,0);
-            _commandBuffer.SetBufferCounterValue(_culledPatchBuffer,0);
-            _commandBuffer.SetBufferCounterValue(_patchBoundsBuffer,0);
+            _commandBuffer.SetComputeBufferCounterValue(_maxLODNodeList,(uint)_maxLODNodeList.count);
+            _commandBuffer.SetComputeBufferCounterValue(_nodeListA,0);
+            _commandBuffer.SetComputeBufferCounterValue(_nodeListB,0);
+            _commandBuffer.SetComputeBufferCounterValue(_finalNodeListBuffer,0);
+            _commandBuffer.SetComputeBufferCounterValue(_culledPatchBuffer,0);
+            _commandBuffer.SetComputeBufferCounterValue(_patchBoundsBuffer,0);
         }
 
         private void UpdateCameraFrustumPlanes(Camera camera){
